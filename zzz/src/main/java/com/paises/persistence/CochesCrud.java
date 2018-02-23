@@ -36,7 +36,7 @@ public class CochesCrud {
 	    	 System.out.println("accion "+accion); 
 	    	 conn = DriverManager.getConnection(connectionURL);
 	      
-	       
+	    	 System.out.println("creado o conectada Bd "+dbName);
 	
 	     Statement statement = conn.createStatement();
 	     if (accion=="S"){
@@ -52,14 +52,16 @@ public class CochesCrud {
 	    	 statement.executeUpdate("INSERT INTO partidas VALUES(1, 10001,CURRENT_TIMESTAMP, 79,'ISLA CRISTINA')");  
 	    	 statement.executeUpdate("INSERT INTO partidas VALUES(1, 10001,CURRENT_TIMESTAMP, 319,'KRONENBURG FC')");
 	    	 */
-	    	/*
+	    	 
+	    	 statement.executeUpdate( "CREATE TABLE coches (marca VARCHAR(30),modelo VARCHAR(30),IDUSER INTEGER  )");
+	    	
 	    	  
 	    	  statement.executeUpdate("delete from coches"); 
 	    	  statement.executeUpdate("INSERT INTO coches VALUES('Renault', 'R21', 1)");     
 	    	  statement.executeUpdate("INSERT INTO coches VALUES('Seat', '124 L', 2)");
 	    	  statement.executeUpdate("INSERT INTO coches VALUES('Fiat', 'uno', 3)");   
 	    	  statement.executeUpdate("INSERT INTO coches VALUES('Renault', 'R12', 4)");
-	    	  */
+	    	  
 	    	 ent.clear();	
 	    	 ResultSet rs = statement.executeQuery("select * from coches");		       			  
 		       while (rs.next()) 
