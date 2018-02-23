@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<title>Insert title here</title>
+</head>
+<body>
+    <h3>{{mensaje}}</h3>
+partidas de usuario
+    <table><td width =1600 align="right">  email:</td><td width =100>{{email}} {{partida_cargada}}</td></table>
+
+ <form id="form2" method="post" >
+      <table ng_model="partidas">
+     
+        <tr ng-repeat="part in partidas">
+           <td>  <input type="text" name="iduser" value="{{part.iduser}}" > </td>  
+           <td>  <input type="text" name="codpart" value="{{part.codpart}}"></td>   
+           <td>   <input type="text" name="FECHAPART" value="{{part.fechapart}}"></td>  
+           <td>  <input type="text" name="CODEQUI" value="{{part.codequi}}" > </td>  
+           <td>  <input type="text" name="EQUIPO" value="{{part.equipo}}"></td>   
+                        
+            <td>   <button ng-click="cargarPartida(part.codpart,part.codequi,part.equipo)">Cargar</button>  </td>                
+        </tr>
+        </table>
+ </form>  	
+ </p>
+  <td>   <button ng-click="nuevaPartida()">Nueva Part</button>  </td>  
+  
+  <td>   <button ng-click="fu_accion_sql()">Accion</button>  </td>
+  
+   
+</body>
+</html>

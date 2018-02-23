@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+ 
+  <body>
+  
+    <h3>HOLA {{mensaje}} <--> visitas:{{visitas}} </h3>
+
+      <table>
+        <tr ng-repeat="persona in personas">
+           <td> {{persona.nombre}}</td>
+           <td>{{persona.edad}}</td>
+           <td><input type="button" ng-click="consola(persona)"/>
+        </tr>
+
+        </table>
+ <form id="form2" method="post" action="servicios/coches/del">
+      <table>
+        <tr ng-repeat="coche in coches">
+           <td>  <input type="text" name="iduser" value={{coche.iduser}} > </td>  
+           <td>  <input type="text" name="marca" value={{coche.marca}}></td>   
+            <td>   <input type="text" name="modelo" value={{coche.modelo}}></td>  
+            <td>   <button ng-click="cambiarMensaje()">Delete</button>  </td>                
+        </tr>
+        </table>
+ </form>  	
+ 
+ 
+ <h3>crear coche</h3>	
+
+<form id="form2" method="post" action="servicios/coches/add">
+    <div>
+        <div>
+            <input type="text" name="iduser" value=5 />
+        </div>
+        <div>
+            <input type="text" name="marca" value="Alfa Romeo" />
+        </div>
+        <div>
+            <input type="text" name="modelo" value=72 />
+        </div>        
+        <div>
+            <input type="submit" name="enviar" value="Enviar" />
+        </div>
+    </div>
+    </form>
+ 
+ 
+ 
+     </body> 
+</html>

@@ -1,0 +1,14 @@
+/*Para poner la barra de herramientas encima y el resto abajo*/
+#menu {
+	width : 100%;
+}
+
+#content {
+	width : 100%;
+	padding-left: 3%;
+}
+
+/* Para centrar algo en la pantalla */
+.centrar {
+  text-align: center;
+}
